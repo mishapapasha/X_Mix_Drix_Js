@@ -1,1 +1,64 @@
 
+
+:root {
+    --board-size:   348px;
+    --cell-size:    100px;
+    --border-size:  3px;
+    --margin-cell:  5px;
+    --played-cell-size: 300%;
+}
+
+body {
+    background-color: azure;
+}
+
+#game {
+    text-align: center;
+}
+
+#state {
+    display: inline-block;
+}
+
+#state::first-letter {
+    color: red;
+    font-size: xx-large;
+    
+}
+
+#player {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+#player::first-letter {
+    text-transform: capitalize;
+    color: blue;
+}
+
+#board {
+    margin: 0 auto;
+    height: var(--board-size);
+    width:  var(--board-size);
+}
+
+.board_cell {
+    width:          var(--cell-size);
+    height:         var(--cell-size);
+    border:         var(--border-size) solid black;
+    border-radius:  15px;
+    float:          left;
+    margin:         var(--margin-cell);
+}
+
+.board_cell:hover   {
+    box-shadow: 2px 2px 5px gray, -2px -2px 5px grey;
+}
+
+.board_cell > span {
+    text-align: center;
+    vertical-align: middle;
+    line-height: var(--cell-size);
+    font-size: var(--played-cell-size);
+    font-weight: bold;
+} 
